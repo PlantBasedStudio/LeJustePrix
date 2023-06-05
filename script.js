@@ -52,7 +52,7 @@ function win() {
 }
 
 function randomLot(array) {
-    let element =  Math.floor(Math.random(array.length));
+    let element =  Math.floor(Math.random() * array.length);
     return array[element];
 }
 
