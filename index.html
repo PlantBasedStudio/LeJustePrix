@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le juste prix - Jeu en ligne</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur le jeu du Juste prix</h1>
+    </header>
+
+    <main class="orange">
+        <h6 class="orange">Le but du jeu est de deviner le prix de l'article que vous voyez affiché à l'écran. Indice, il est compris entre 1 et 100€.</h6>
+        <div class="gridToPrint orange">
+            <div class="grid1 orange">
+                <img src="https://picsum.photos/200" alt="image random">
+            </div>
+            <div class="grid2 orange">
+                <p class="orange">Veuillez entrer un prix</p>
+                <input type="text" class="essai">
+                <button class="btnValide">Valider</button>
+                <p class="result orange">Il vous reste 7 essais</p>
+                <p class="indice orange"></p>
+                <button class="btnRetry">Recommencer</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
