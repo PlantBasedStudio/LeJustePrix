@@ -46,8 +46,10 @@ main{
     color: white;
 }
 
-
-
+.btnRetry{
+    position: relative;
+    left: 35%;
+}
 @-webkit-keyframes flip-horizontal-bottom {
     0% {
     -webkit-transform: rotateX(0);
@@ -67,4 +69,8 @@ main{
     -webkit-transform: rotateX(-180deg);
     transform: rotateX(-180deg);
     }
+}
+
+.winner{
+    display: none;
 }

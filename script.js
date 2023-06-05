@@ -14,7 +14,7 @@ let btnRecommencer = document.querySelector(".btnRetry");
 let isWin = false; 
 let newGame = false;
 let lotsAGagner = ["une voiture", "un animal de compagnie", "un bon d'achat"]
-
+let winPicture = document.querySelector(".winner");
 
 let flipImg = document.querySelector(".flip-horizontal-bottom");
 console.log(priceToFind);
@@ -44,11 +44,14 @@ btnRecommencer.addEventListener("click", (event) => {
 //! ---- HIDE DISPLAY ----
 btnRecommencer.style.display = "none";
 
+
 //! ---- FUNCTIONS ---- 
 function win() {
     btnRecommencer.style.display = "block"; //! show diplay
     newGame = true;
     flipImg.style.animation="flip-horizontal-bottom 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both";
+    winPicture.style.display="block";
+    winPicture.style.margin = "0 auto";
 }
 
 function randomLot(array) {
@@ -75,7 +78,7 @@ function test(valueEntered){
         result.textContent = `Il vous reste ${parseInt(maxTry - tryNumber)} essais`
         essai.value = "";
     }
-    if (tryNumber === maxTry) {
+    if (tryNumber === maxTry && proposedPrice !== priceToFind) {
         reponse.textContent = "Vous avez perdu car vous avez utiliser tout vos essais";
         btnRecommencer.style.display = "block";
         newGame = true;
