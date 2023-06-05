@@ -36,7 +36,7 @@ main{
     border: solid 3px orange;
     border-radius: 45px;
     margin: 0 25px;
-    
+    padding-bottom: 20px;
 }
 
 
@@ -44,4 +44,27 @@ main{
     background-color: orange;
     border-radius: 45px;
     color: white;
+}
+
+
+
+@-webkit-keyframes flip-horizontal-bottom {
+    0% {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    }
+    100% {
+    -webkit-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+    }
+}
+@keyframes flip-horizontal-bottom {
+    0% {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    }
+    100% {
+    -webkit-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+    }
 }

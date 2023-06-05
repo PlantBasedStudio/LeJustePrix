@@ -13,7 +13,10 @@ let reponse = document.querySelector(".indice");
 let btnRecommencer = document.querySelector(".btnRetry");
 let isWin = false; 
 let newGame = false;
+let lotsAGagner = ["une voiture", "un animal de compagnie", "un bon d'achat"]
 
+
+let flipImg = document.querySelector(".flip-horizontal-bottom");
 console.log(priceToFind);
 
 
@@ -45,6 +48,12 @@ btnRecommencer.style.display = "none";
 function win() {
     btnRecommencer.style.display = "block"; //! show diplay
     newGame = true;
+    flipImg.style.animation="flip-horizontal-bottom 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both";
+}
+
+function randomLot(array) {
+    let element =  Math.floor(Math.random(array.length));
+    return array[element];
 }
 
 
@@ -58,7 +67,7 @@ function test(valueEntered){
 		
             reponse.textContent = "prix trop bas";
         } else if (parseInt(proposedPrice) === parseInt(priceToFind)) {
-            reponse.textContent = "Vous avez trouvé le juste prix, bravo!";
+            reponse.textContent = "Vous avez trouvé le juste prix, bravo! Vous pouvez récupérer " + randomLot(lotsAGagner);
             win();
         } else{
             reponse.textContent = "prix invalide, veuillez vérifier le format";
